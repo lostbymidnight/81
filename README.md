@@ -7,7 +7,7 @@ The official interpreter for [_81_](https://esolangs.org/wiki/81), the esolang b
 Install the interpreter with cargo:
 
 ```sh
-cargo install --git https://github.com/lostbymidnight/81
+cargo install eighty-one
 ```
 
 ## Usage
