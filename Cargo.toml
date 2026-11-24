@@ -11,6 +11,7 @@ repository = "https://github.com/lostbymidnight/81"
 homepage = "https://esolangs.org/wiki/81"
 keywords = ["esolang", "interpreter", "esoteric", "base81"]
 categories = ["command-line-utilities", "compilers"]
+exclude = [".github", ".gitattributes", ".gitignore"]
 
 [profile.release]
 lto = true
