@@ -1,6 +1,6 @@
 # _81_
 
-The official interpreter for [_81_](https://esolangs.org/wiki/81), the esolang by Waffelz. The wiki page covers the language itself.
+The official interpreter for [_81_](https://esolangs.org/wiki/81), the esolang by [waffelz](https://github.com/waffelz0/). The wiki page covers the language itself.
 
 ## Install
 
