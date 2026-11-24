@@ -1,0 +1,43 @@
+=== input collection ===
+NIN           @ the number to check
+CPY A RX
+
+=== handle n = 0 or 1 edge cases ===
+JLS RX [2] na
+
+=== prepare memory ===
+CPY [2] RY    @ the current integer being divided
+
+=== main loop ===
+) loop
+@ if RY^2 > RX, and the loop is still going (meaning
+@ it passed), the number is prime
+MUL RY RY
+JGR A RX prime
+
+@ if RX % RY == 0, the number is not prime
+DIV RX RY
+MUL A RY
+SUB RX A
+JEQ A [0] composite
+
+@ increment RY and loop
+INC RY
+JMP loop
+
+=== primality check indeterminate ===
+) na
+OUT [?] @ N (78)
+OUT [l] @ / (47)
+OUT [$] @ A (65)
+HLT
+
+=== primality check passed (prime) ===
+) prime
+OUT [13] @ T (84)
+HLT
+
+=== primality check failed (not prime) ===
+) composite
+OUT [+]  @ F (70)
+HLT

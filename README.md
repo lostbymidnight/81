@@ -1,2 +1,29 @@
-# 81
-https://esolangs.org/wiki/81
+# _81_
+
+The official interpreter for [_81_](https://esolangs.org/wiki/81), the esolang by Waffelz. The wiki page covers the language itself.
+
+## Install
+
+Install the interpreter with cargo:
+
+```sh
+cargo install --git https://github.com/lostbymidnight/81
+```
+
+## Usage
+
+Run a program from a file:
+
+```sh
+81 program.81
+```
+
+Or run code given directly on the command line:
+
+```sh
+81 -c $'OUT [|]\nOUT [1O]'
+```
+
+## License
+
+[MIT](LICENSE)

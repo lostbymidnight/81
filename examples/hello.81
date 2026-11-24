@@ -1,0 +1,15 @@
+=== Hello, World! ===
+OUT [|]     @ H (72)
+OUT [1K]    @ e (101)
+OUT [1R]    @ l (108)
+OUT [1R]    @ l (108)
+OUT [1U]    @ o (111)
+OUT [i]     @ , (44)
+OUT [W]     @ space (32)
+OUT [16]    @ W (87)
+OUT [1U]    @ o (111)
+OUT [1X]    @ r (114)
+OUT [1R]    @ l (108)
+OUT [1J]    @ d (100)
+OUT [X]     @ ! (33)
+HLT

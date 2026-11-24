@@ -1,0 +1,55 @@
+=== input collection ===
+NIN           @ iteration count
+CPY A RX
+
+=== edge cases ===
+JEQ RX [0] zero
+JEQ RX [1] c1
+JEQ RX [2] c2
+
+=== prepare memory ===
+CPY [0] {0}
+CPY [1] {1}
+DEC RX
+DEC RX
+
+=== set up output ===
+NOU {0}
+OUT [W]     @ space (32)
+NOU {1}
+
+=== main loop ===
+) loop
+ADD {0} {1} @ the next number from the two in memory
+JCD V err   @ jump to err on an overflow
+
+OUT [W]     @ output a space, then the number
+NOU A
+CPY A {0}
+
+SWP {0} {1} @ keep only what is needed for the next iteration
+DEC RX
+JGR RX 0 loop
+HLT
+
+=== 0 edge case ===
+) zero
+HLT
+
+=== 1 edge case ===
+) c1
+NOU [0]
+HLT
+
+=== 2 edge case ===
+) c2
+NOU [0]     @ memory has not been prepared yet at this point
+OUT [W]
+NOU [1]
+HLT
+
+=== overflow error ===
+) err
+OUT [*]    @ E (69)
+OUT [1X]   @ r (114)
+OUT [1X]   @ r (114)
